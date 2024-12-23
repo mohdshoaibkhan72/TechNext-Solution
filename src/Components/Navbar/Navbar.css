@@ -1,10 +1,14 @@
 .Navbar-section {
   display: flex;
+  width: 98vw;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
+  height: 7vh;
   padding: 10px 20px;
+  background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+  color: black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -12,17 +16,135 @@
 }
 
 .navbar-links {
-  list-style: none;
+  height: 5vh;
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
   margin: 0;
+  padding: 0;
+  gap: 50px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
 }
 
 .navbar-links li {
+  position: relative;
   cursor: pointer;
-  color: white;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 .navbar-links li:hover {
-  text-decoration: underline;
+  color: #ff6347;
+  text-decoration: none; /* Removed underline for cleaner effect */
+  transform: translateY(-3px); /* Slight upward movement for a 3D effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  position: relative; /* Ensures positioning of the dropdown */
+}
+
+.dropdown-content {
+  display: none;
+  margin: 1.3rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.3s ease; /* Fade-in transition */
+}
+
+.dropdown-content li {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content li:hover {
+  background-color: #f1f1f1; /* Lighter hover effect */
+}
+
+/* Ensure dropdown shows on hover */
+.navbar-links .dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1; /* Show dropdown with fade-in effect */
+}
+
+/* Base styling for the button */
+.contact-section button {
+  font-size: 16px;
+  height: 5vh;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #4ac6f9;
+  cursor: pointer;
+  background-color: #f69ccf;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background-color 0.4s ease, transform 0.3s ease,
+    box-shadow 0.3s ease, color 0.4s ease;
+}
+
+/* Hover effect */
+.contact-section button:hover {
+  background-color: #4ac6f9;
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(74, 198, 249, 0.4);
+}
+
+/* Ripple effect */
+.contact-section button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: -1;
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+}
+
+.contact-section button:hover::before {
+  width: 300%;
+  height: 300%;
+  opacity: 1;
+}
+
+/* Border animation */
+.contact-section button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  z-index: 1;
+  transition: border-color 0.4s ease;
+}
+
+.contact-section button:hover::after {
+  border-color: #fff;
 }

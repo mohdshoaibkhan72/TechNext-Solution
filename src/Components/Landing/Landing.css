@@ -1,0 +1,83 @@
+/* Reset and Global Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Landing Page Container */
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 92vh;
+  padding: 20px;
+  background: linear-gradient(to right, #33ccff, #ff99cc);
+  color: #fff;
+}
+
+/* Left Section: Text Content */
+.leftdiv {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.leftdiv h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.leftdiv p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Right Section: Hero Image */
+.rightdiv {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leftdiv {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .rightdiv {
+    padding: 0;
+  }
+}
