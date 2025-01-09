@@ -1,8 +1,14 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Playfair+Display:wght@700&display=swap");
+
 /* Reset and Global Styles */
 body {
+  overflow-x: hidden;
+
   margin: 0;
-  font-family: "Arial", sans-serif;
-  background-color: #f9f9f9;
+  font-family: "Raleway", sans-serif;
+  background-color: #fff; /* White background */
+  color: #333; /* Black text */
 }
 
 /* Landing Page Container */
@@ -11,43 +17,51 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 92vh;
-  padding: 20px;
-  background: linear-gradient(to right, #33ccff, #ff99cc);
-  color: #fff;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
-
-/* Left Section: Text Content */
 .leftdiv {
   flex: 1;
   max-width: 50%;
-  padding: 20px;
+  padding: 30px;
 }
-
 .leftdiv h1 {
-  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
   margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000; /* Black color for the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for better contrast */
 }
-
 .leftdiv p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  line-height: 1.8;
   margin-bottom: 30px;
+  color: #444; /* Slightly lighter black for paragraph text */
 }
 
 .cta-button {
-  padding: 12px 25px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007bff;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #000; /* Black button */
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+  background: #444; /* Dark grey on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Right Section: Hero Image */
@@ -60,24 +74,85 @@ body {
 }
 
 .hero-image {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .landing-page {
+    padding: 20px;
+  }
+
+  .leftdiv h1 {
+    font-size: 3.5rem;
+  }
+
+  .leftdiv p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+  }
+}
+
 @media (max-width: 768px) {
   .landing-page {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 
   .leftdiv {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .rightdiv {
-    padding: 0;
+    padding: 10px;
+  }
+}
+/* Right Section: Hero Image */
+.rightdiv {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+  animation: moveUpDown 5s ease-in-out infinite; /* Add the animation */
+}
+
+/* Keyframes for the up and down movement */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* Start at original position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move up by 20px */
+  }
+  100% {
+    transform: translateY(0); /* End back at the original position */
+  }
+}
+.rotating-svg {
+  animation: rotate 4s linear infinite; /* 4 seconds duration, continuous rotation */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End at 360 degrees (full rotation) */
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Landing.css";
-
+import img1 from "../../images/banner-image-2.png";
 function Landing() {
   return (
     <div className="landing-page">
@@ -16,11 +16,7 @@ function Landing() {
 
       {/* Right Section: Hero Image */}
       <div className="rightdiv">
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Professional Services"
-          className="hero-image"
-        />
+        <img src={img1} alt="Professional Services" className="hero-image" />
       </div>
     </div>
   );
