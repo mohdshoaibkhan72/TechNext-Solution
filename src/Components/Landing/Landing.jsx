@@ -14,7 +14,6 @@ function Landing() {
         <button className="cta-button">Get Started</button>
       </div>
 
-      {/* Right Section: Hero Image */}
       <div className="rightdiv">
         <img src={img1} alt="Professional Services" className="hero-image" />
       </div>

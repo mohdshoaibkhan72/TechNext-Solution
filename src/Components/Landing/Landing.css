@@ -4,7 +4,6 @@
 /* Reset and Global Styles */
 body {
   overflow-x: hidden;
-
   margin: 0;
   font-family: "Raleway", sans-serif;
   background-color: #fff; /* White background */
@@ -13,12 +12,13 @@ body {
 
 /* Landing Page Container */
 .landing-page {
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 92vh;
-  background-color: #fff; /* White background */
-  color: #000; /* Black text */
+
+  background-color: #fff;
+  color: #000;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -28,6 +28,7 @@ body {
   max-width: 50%;
   padding: 30px;
 }
+
 .leftdiv h1 {
   font-family: "Playfair Display", serif;
   font-size: 4rem;
@@ -116,7 +117,7 @@ body {
     padding: 10px;
   }
 }
-/* Right Section: Hero Image */
+
 .rightdiv {
   flex: 1;
   display: flex;
