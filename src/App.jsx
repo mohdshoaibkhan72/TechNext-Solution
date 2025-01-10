@@ -4,6 +4,7 @@ import Landing from "./Components/Landing/Landing";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Services from "./Components/services/Services";
 import WhyChooseUs from "./Components/whychoseus/whychoseus";
+import Testimonials from "./Components/Testimonials/Testimonials";
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
       <AboutUs></AboutUs>
       <Services></Services>
       <WhyChooseUs></WhyChooseUs>
+      <Testimonials></Testimonials>
     </>
   );
 }
