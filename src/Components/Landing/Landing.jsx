@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Landing.css";
-import img1 from "../../images/aboutus.jpeg";
+import img1 from "../../images/growtbussiness.jpg";
 import img2 from "../../images/banner-image-2.png";
 import img3 from "../../images/dot-line.jpg";
 
