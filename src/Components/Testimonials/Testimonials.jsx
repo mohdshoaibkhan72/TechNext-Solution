@@ -7,40 +7,37 @@ const testimonialsData = [
     name: "Ashish Senger",
     position: "CEO, Paisa4you",
     feedback:
-      "The digital marketing team helped us achieve a 300% increase in web traffic!",
-    image: "https://via.placeholder.com/100",
+      "Technext Solution's digital marketing expertise helped us achieve a 300% increase in web traffic and generate quality leads for our loan products!",
   },
   {
     name: "Mohd Saif",
-    position: "CEO,PrayagTea",
-    feedback: "Their social media strategy transformed our brand presence.",
-    image: "https://via.placeholder.com/100",
+    position: "CEO, PrayagTea",
+    feedback:
+      "The team at Technext Solution completely transformed our brand's social media presence. We saw a significant boost in customer engagement and sales.",
   },
   {
     name: "Mark Wilson",
     position: "Founder, NGOs",
-    feedback: "Their SEO services brought us to the top of search rankings.",
-    image: "https://via.placeholder.com/100",
+    feedback:
+      "Thanks to Technext Solution's SEO services, we ranked on the first page of search engines, increasing our visibility and donations.",
   },
   {
     name: "Sarah Brown",
     position: "CMO, Healthify",
-    feedback: "Their content marketing strategies brought significant growth.",
-    image: "https://via.placeholder.com/100",
+    feedback:
+      "Technext Solution’s content marketing strategies were spot-on! Their approach brought us more traffic and increased brand awareness.",
   },
   {
     name: "Michael Lee",
     position: "Director, FinServe",
     feedback:
-      "The PPC campaigns they ran for us resulted in an incredible ROI.",
-    image: "https://via.placeholder.com/100",
+      "The PPC campaigns managed by Technext Solution delivered exceptional results. We saw a remarkable return on investment within the first month.",
   },
   {
     name: "Emma Green",
     position: "Owner, GreenStyle",
     feedback:
-      "Thanks to their email marketing strategy, our customer retention increased significantly.",
-    image: "https://via.placeholder.com/100",
+      "The email marketing strategies provided by Technext Solution helped us increase our customer retention rate by 40%. Highly recommend their services!",
   },
 ];
 
@@ -75,7 +72,6 @@ const Testimonials = () => {
       <Slider {...settings} className="testimonials-slider">
         {testimonialsData.map((testimonial, index) => (
           <div className="testimonial-card" key={index}>
-            <img src={testimonial.image} alt={testimonial.name} />
             <h3>{testimonial.name}</h3>
             <p className="position">{testimonial.position}</p>
             <p className="feedback">"{testimonial.feedback}"</p>

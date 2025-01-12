@@ -1,3 +1,6 @@
+/* Importing Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Playfair+Display:wght@700&display=swap");
+
 /* Navbar Section */
 .Navbar-section {
   height: 7vh;
@@ -9,6 +12,7 @@
   padding: 10px;
   position: relative;
 }
+
 .Navbar-section p {
   display: none;
 }
@@ -74,10 +78,10 @@
   background-color: #f1f1f1;
   min-width: 260px;
   border-radius: 5px;
-
   top: 100%;
   left: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 .dropdown-content li {
@@ -94,6 +98,22 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Ensure parent elements have proper positioning */
+.navbar-links {
+  position: relative;
+  z-index: 100; /* Ensure the navbar links stay above other content */
+}
+
+.Navbar-section {
+  position: relative;
+  z-index: 100;
+}
+
+/* Prevent overflow issues */
+.landing-page {
+  overflow: visible; /* Ensure dropdowns are not hidden */
 }
 
 /* Contact Button */
@@ -143,11 +163,13 @@
   .navbar-links {
     display: none;
   }
+
   .Navbar-section p {
     display: flex;
     font-size: 1.4rem;
     font-weight: 500;
   }
+
   .contact-section {
     margin-top: 15px;
     width: 100%;
@@ -158,11 +180,13 @@
   .log .i {
     display: none;
   }
+
   .log .logo img {
     width: 100%;
     justify-content: center;
     align-items: center;
   }
+
   .log div {
     margin-left: 0;
     margin-bottom: 10px;
@@ -179,6 +203,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .flip-text {
     font-size: 13px;
   }

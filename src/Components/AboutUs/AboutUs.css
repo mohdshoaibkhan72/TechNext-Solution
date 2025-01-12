@@ -16,7 +16,7 @@
   max-width: 500px;
   height: auto;
   border-radius: 12px;
-  animation: moveUpDown 5s ease-in-out infinite;
+  animation: moveDown 5s ease-in-out infinite;
 }
 
 .rightside {
@@ -43,6 +43,18 @@
   color: #555;
   line-height: 1.8;
   margin-bottom: 20px;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px); /* Moves the image 20px down */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1024px) {

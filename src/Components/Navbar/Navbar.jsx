@@ -31,35 +31,29 @@ function Navbar() {
           aria-label="Toggle navigation"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <i className="fas fa-bars"></i> {/* Using Font Awesome icon */}
+          <i className="fas fa-bars"></i>
         </button>
 
         <ul className={`navbar-links ${isMenuOpen ? "show" : ""}`}>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text" data-hover="Home">
-                Home
-              </span>
+              <span className="flip-text">Home</span>
             </div>
           </li>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text" data-hover="About Us">
-                About Us
-              </span>
+              <span className="flip-text">About Us</span>
             </div>
           </li>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text" data-hover="Portfolio">
-                Portfolio
-              </span>
+              <span className="flip-text">Portfolio</span>
             </div>
           </li>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text" data-hover="Services">
-                Services <i class="fa-solid fa-caret-down"></i>
+              <span className="flip-text">
+                Services <i className="fa-solid fa-caret-down"></i>
               </span>
             </div>
             <ul className="dropdown-content">
@@ -71,9 +65,7 @@ function Navbar() {
           </li>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text" data-hover="Blogs">
-                BLOGS
-              </span>
+              <span className="flip-text">BLOGS</span>
             </div>
           </li>
         </ul>

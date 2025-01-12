@@ -1,0 +1,259 @@
+/* Add the ">" symbol before each <a> tag except for social icons */
+.footer-section a:not(.social-icon)::before {
+  content: "> ";
+  color: #fff; /* You can change this to match your footer text color */
+  font-size: 18px; /* Adjust the size as needed */
+  margin-right: 8px; /* Space between the ">" and the text */
+}
+
+/* Your other existing styles */
+.footer-section {
+  background-color: #282828;
+  color: #fff;
+  padding: 40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-address-social {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-address h4,
+.footer-social-icons h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-address p {
+  font-size: 16px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-address i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Social Icon Colors */
+.facebook:hover {
+  color: #3b5998;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.instagram:hover {
+  color: #e1306c;
+}
+
+/* About Us & Services Sections */
+.footer-about-us,
+.footer-services {
+  flex: 1;
+  margin: 20px 0;
+}
+
+.footer-about-us ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-about-us li,
+.footer-services li {
+  margin: 8px 0;
+}
+
+.footer-about-us a,
+.footer-services a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s, letter-spacing 0.3s;
+}
+
+.footer-about-us a:hover,
+.footer-services a:hover {
+  color: #555;
+  letter-spacing: 2px;
+}
+
+/* Map Section */
+.footer-map {
+  flex: 1;
+  margin: 20px 0;
+}
+
+.map-container iframe {
+  border: none;
+  width: 100%;
+  height: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-address-social,
+  .footer-about-us,
+  .footer-services,
+  .footer-map {
+    margin-bottom: 20px;
+  }
+}
+/* Footer Section Styles */
+.footer-section {
+  background-color: #282828;
+  color: #fff;
+  padding: 40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-address-social {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-address h4,
+.footer-social-icons h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-address p {
+  font-size: 16px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-address i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px; /* Adjusted for better spacing */
+}
+
+.footer-social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* About Us & Services Sections */
+.footer-about-us,
+.footer-services {
+  flex: 1;
+  margin: 20px 0;
+}
+
+.footer-about-us ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-about-us li,
+.footer-services li {
+  margin: 8px 0;
+}
+
+.footer-about-us a,
+.footer-services a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s, letter-spacing 0.3s;
+}
+
+.footer-about-us a:hover,
+.footer-services a:hover {
+  color: #555;
+  letter-spacing: 2px;
+}
+
+/* Map Section */
+.footer-map {
+  flex: 1;
+  margin: 20px 0;
+}
+
+.map-container iframe {
+  border: none;
+  width: 100%;
+  height: 200px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0; /* Adjusted for better spacing */
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom-text {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-address-social,
+  .footer-about-us,
+  .footer-services,
+  .footer-map {
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom-text {
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+}
