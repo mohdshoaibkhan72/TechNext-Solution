@@ -36,26 +36,45 @@ function Landing() {
     slides[0], // Clone first slide at the end
   ];
 
-  // Auto-slide every 4 seconds
+  // Auto-slide every 4 seconds and handle tab visibility
   useEffect(() => {
     const slideInterval = setInterval(() => {
       nextSlide();
     }, 4000);
-    return () => clearInterval(slideInterval);
+
+    // Reset the slider when the tab becomes visible again
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        setIsTransitioning(false);
+        setCurrentIndex(1);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      clearInterval(slideInterval);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   // Move to the next slide
   const nextSlide = () => {
     setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => prevIndex + 1);
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex >= extendedSlides.length - 1) {
+        return 1;
+      }
+      return prevIndex + 1;
+    });
   };
 
   // Reset position after reaching the end or start
   const handleTransitionEnd = () => {
-    if (currentIndex === extendedSlides.length - 1) {
+    if (currentIndex >= extendedSlides.length - 1) {
       setIsTransitioning(false);
       setCurrentIndex(1);
-    } else if (currentIndex === 0) {
+    } else if (currentIndex <= 0) {
       setIsTransitioning(false);
       setCurrentIndex(slides.length);
     }

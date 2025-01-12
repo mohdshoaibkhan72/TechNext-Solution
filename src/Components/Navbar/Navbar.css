@@ -25,8 +25,8 @@
 /* Hamburger Icon */
 .hamburger-icon {
   display: none;
-  font-size: 24px; /* Adjust size of icon */
-  color: #000; /* Color of the hamburger icon */
+  font-size: 24px;
+  color: #000;
   background: none;
   border: none;
   cursor: pointer;
@@ -65,6 +65,7 @@
   color: #000;
   cursor: pointer;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .flip-text:hover {
@@ -81,7 +82,7 @@
   top: 100%;
   left: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensure it stays on top */
+  z-index: 1000;
 }
 
 .dropdown-content li {
@@ -100,12 +101,19 @@
   display: block;
 }
 
-/* Ensure parent elements have proper positioning */
-.navbar-links {
-  position: relative;
-  z-index: 100; /* Ensure the navbar links stay above other content */
+/* Remove text decoration and set link color to black */
+.dropdown-content li a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
 }
 
+.dropdown-content li a:hover {
+  color: #555;
+}
+
+/* Navbar Links Z-Index */
+.navbar-links,
 .Navbar-section {
   position: relative;
   z-index: 100;
@@ -113,7 +121,7 @@
 
 /* Prevent overflow issues */
 .landing-page {
-  overflow: visible; /* Ensure dropdowns are not hidden */
+  overflow: visible;
 }
 
 /* Contact Button */
@@ -149,12 +157,31 @@
   margin-left: 30px;
 }
 
+.log .i a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .logo img {
   max-height: 50px;
+  width: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .log {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .log div {
+    margin-left: 20px;
+  }
+
+  .logo img {
+    max-height: 40px;
+  }
+
   .hamburger-icon {
     display: flex;
     font-size: 1.4rem;
@@ -183,8 +210,6 @@
 
   .log .logo img {
     width: 100%;
-    justify-content: center;
-    align-items: center;
   }
 
   .log div {
@@ -200,8 +225,6 @@
 
   .log .logo img {
     width: 100%;
-    justify-content: center;
-    align-items: center;
   }
 
   .flip-text {

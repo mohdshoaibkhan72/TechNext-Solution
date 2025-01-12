@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "../../images/1 copy.png";
 import "./Navbar.css";
 
@@ -16,10 +17,14 @@ function Navbar() {
           <i className="fas fa-clock"></i> Mon-Sat, 10:00 AM to 6:00 PM
         </div>
         <div className="i">
-          <i className="fas fa-phone-alt"></i> +91-7310249234
+          <i className="fas fa-phone-alt"></i>{" "}
+          <a href="tel:+917310249234">+91-7310249234</a>
         </div>
         <div className="i">
-          <i className="fas fa-envelope"></i> info@technextsolution.com
+          <i className="fas fa-envelope"></i>{" "}
+          <a href="mailto:info@technextsolution.com">
+            info@technextsolution.com
+          </a>
         </div>
       </div>
 
@@ -37,17 +42,26 @@ function Navbar() {
         <ul className={`navbar-links ${isMenuOpen ? "show" : ""}`}>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text">Home</span>
+              <Link to="/" className="flip-text">
+                Home
+              </Link>{" "}
+              {/* Changed to Link */}
             </div>
           </li>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text">About Us</span>
+              <Link to="/aboutus" className="flip-text">
+                About Us
+              </Link>{" "}
+              {/* Changed to Link */}
             </div>
           </li>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text">Portfolio</span>
+              <Link to="/portfolio" className="flip-text">
+                Portfolio
+              </Link>{" "}
+              {/* Changed to Link */}
             </div>
           </li>
           <li className="dropdown">
@@ -57,22 +71,37 @@ function Navbar() {
               </span>
             </div>
             <ul className="dropdown-content">
-              <li>Web Development</li>
-              <li>E-commerce Development</li>
-              <li>App Development</li>
-              <li>SEO</li>
+              <li>
+                <Link to="/services/web-development">Web Development</Link>{" "}
+                {/* Link to specific service */}
+              </li>
+              <li>
+                <Link to="/services/e-commerce">E-commerce Development</Link>{" "}
+                {/* Link to specific service */}
+              </li>
+              <li>
+                <Link to="/services/app-development">App Development</Link>{" "}
+                {/* Link to specific service */}
+              </li>
+              <li>
+                <Link to="/services/seo">SEO</Link>{" "}
+                {/* Link to specific service */}
+              </li>
             </ul>
           </li>
           <li className="dropdown">
             <div className="flip-container">
-              <span className="flip-text">BLOGS</span>
+              <Link to="/blogs" className="flip-text">
+                BLOGS
+              </Link>{" "}
+              {/* Changed to Link */}
             </div>
           </li>
         </ul>
 
         {/* Contact Button */}
         <div className="contact-section">
-          <button>Contact</button>
+          <button href="tel:+917310249234">Contact</button>
         </div>
       </div>
     </nav>

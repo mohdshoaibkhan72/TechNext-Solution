@@ -48,7 +48,7 @@
 
 .image-section img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 10px;
   animation: moveUpDown 5s ease-in-out infinite;
 }
