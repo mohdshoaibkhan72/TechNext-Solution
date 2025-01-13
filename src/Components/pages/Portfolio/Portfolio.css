@@ -79,7 +79,7 @@
 }
 
 .nav-links a:hover {
-  color: #007bff;
+  color: #5555;
 }
 
 /* Portfolio Section Styles */
@@ -187,8 +187,8 @@
 }
 
 .overlay .links a:hover {
-  color: #007bff;
-  transform: scale(1.1);
+  transform: scale(1.5);
+  transition: 0.5s;
 }
 
 /* Media Query for Responsiveness */

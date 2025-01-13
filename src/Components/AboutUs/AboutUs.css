@@ -77,3 +77,54 @@
     font-size: 16px;
   }
 }
+
+/* Full-width image and navigation at the top */
+.header-section {
+  position: relative;
+  width: 100%;
+  height: 20vh; /* Adjust the height as per your design */
+  background-color: #333;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.nav-links {
+  font-size: 1.2rem;
+  display: flex; /* Aligns the text in a row */
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-links p {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}

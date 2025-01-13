@@ -100,8 +100,11 @@ function Navbar() {
         </ul>
 
         {/* Contact Button */}
+        {/* Contact Button */}
         <div className="contact-section">
-          <button href="tel:+917310249234">Contact</button>
+          <Link to="/contactus" className="contact-button">
+            Contact Us
+          </Link>
         </div>
       </div>
     </nav>

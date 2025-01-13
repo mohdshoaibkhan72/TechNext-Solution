@@ -244,3 +244,21 @@
     font-size: 11px;
   }
 }
+.contact-section .contact-button {
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-section .contact-button:hover {
+  background: #444;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

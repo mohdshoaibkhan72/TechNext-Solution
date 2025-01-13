@@ -8,6 +8,7 @@ import WhyChooseUs from "./Components/whychoseus/whychoseus";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Footer from "./Components/Footer/Footer";
 import Portfolio from "./Components/pages/Portfolio/portfolio";
+import ContactUs from "./Components/pages/ContactUs/Contactus";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/why-choose-us" element={<WhyChooseUs />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
       <Footer />
     </Router>

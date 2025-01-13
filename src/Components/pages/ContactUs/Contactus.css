@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.header-section {
+  position: relative;
+  width: 100%;
+}
+
+.header-image {
+  width: 100%;
+  height: 100px;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  text-align: center;
+  color: white;
+}
+
+.home-link {
+  font-size: 18px;
+}
+
+.contactus-link {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Contact Us Section */
+.contact-us {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-us h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #555;
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.card:hover .card-icon {
+  color: #2196f3;
+}
+
+.card h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Contact Form Section */
+.form-section {
+  margin-top: 40px;
+  width: 40%; /* Reduced the width */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #444;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll to Top Icon */
+.top-icons {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.scroll-to-top {
+  font-size: 40px;
+  color: #2196f3;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.2);
+}
+
+/* Bottom Icons */
+.bottom-icons {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bottom-icons i {
+  font-size: 40px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.bottom-icons i:hover {
+  color: #2196f3;
+  transform: scale(1.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-section {
+    width: 90%; /* Make form take more space on smaller screens */
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .header-image {
+    height: 200px;
+  }
+}
+
+/* Contact Buttons */
+.contact-button {
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #444;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-button:focus {
+  outline: none; /* Remove the default outline on focus */
+}
+
+.contact-button:active {
+  background-color: #555; /* Even darker blue on active */
+}
