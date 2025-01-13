@@ -12,8 +12,8 @@ const Footer = () => {
               <div className="footer-address">
                 <h4>Find Us</h4>
                 <p>
-                  <i className="fas fa-map-marker-alt"></i> SCO 45-46, Sector
-                  34-A, Chandigarh, India
+                  <i className="fas fa-map-marker-alt"></i> prayagraj, Uttar
+                  pradesh, Indai -211001
                 </p>
                 <p>
                   <i className="fas fa-envelope"></i> info@technextsolution.com
