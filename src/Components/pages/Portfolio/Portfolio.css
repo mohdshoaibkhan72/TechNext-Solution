@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap; /* Added to allow buttons to wrap on smaller screens */
 }
 
 .filter-buttons button {
@@ -62,9 +63,10 @@
 
 .nav-links {
   font-size: 1.2rem;
-  display: flex; /* Aligns the text in a row */
+  display: flex;
   justify-content: center;
   gap: 5px;
+  flex-wrap: wrap; /* Allows wrapping of links on smaller screens */
 }
 
 .nav-links p {
@@ -113,6 +115,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap; /* Allows the cards to wrap */
 }
 
 .project-card {
@@ -125,6 +128,7 @@
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   z-index: 0;
+  width: 300px; /* Default width for cards */
 }
 
 .project-card:hover {
@@ -192,6 +196,30 @@
 }
 
 /* Media Query for Responsiveness */
+@media (max-width: 1024px) {
+  .portfolio-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-section p {
+    font-size: 1rem;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .overlay .links a {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio-section h2 {
     font-size: 2rem;
@@ -219,5 +247,26 @@
 @media (max-width: 576px) {
   .nav-links {
     font-size: 0.9rem;
+    flex-direction: column; /* Stack the navigation links */
+  }
+
+  .header-section {
+    height: 25vh; /* Slightly adjust height for small screens */
+  }
+
+  .header-overlay {
+    font-size: 1.1rem; /* Adjust font size */
+  }
+
+  .project-card {
+    width: 100%; /* Full width for cards on small screens */
+  }
+
+  .overlay h3 {
+    font-size: 1.1rem;
+  }
+
+  .overlay .links a {
+    font-size: 1.2rem;
   }
 }
