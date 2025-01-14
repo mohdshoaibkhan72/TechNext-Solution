@@ -1,13 +1,41 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import React, { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../images/1 copy.png";
 import "./Navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollState, setScrollState] = useState({
+    isSticky: false,
+    isHidden: false,
+  });
+
+  // Toggle menu state
+  const handleLinkClick = useCallback(() => {
+    setIsMenuOpen(false);
+  }, []);
+
+  // Scroll event handler
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    setScrollState({
+      isSticky: scrollY > 100,
+      isHidden: scrollY > 50,
+    });
+  };
+
+  // Attach scroll listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav>
+    <nav
+      className={`navbar ${scrollState.isSticky ? "sticky" : ""} ${
+        scrollState.isHidden ? "navbar-hidden" : ""
+      }`}
+    >
       {/* Top Bar Section */}
       <div className="log">
         <div className="logo">
@@ -30,7 +58,6 @@ function Navbar() {
 
       {/* Navbar Section */}
       <div className="Navbar-section">
-        <p>Menu</p>
         <button
           className="hamburger-icon"
           aria-label="Toggle navigation"
@@ -40,66 +67,49 @@ function Navbar() {
         </button>
 
         <ul className={`navbar-links ${isMenuOpen ? "show" : ""}`}>
+          {[
+            { name: "Home", to: "/" },
+            { name: "About Us", to: "/aboutus" },
+            { name: "Portfolio", to: "/portfolio" },
+            { name: "Blogs", to: "/blogs" },
+          ].map((link) => (
+            <li className="dropdown" key={link.name}>
+              <div className="flip-container">
+                <Link
+                  to={link.to}
+                  className="flip-text"
+                  onClick={handleLinkClick}
+                >
+                  {link.name}
+                </Link>
+              </div>
+            </li>
+          ))}
+
+          {/* Services Dropdown */}
           <li className="dropdown">
             <div className="flip-container">
-              <Link to="/" className="flip-text">
-                Home
-              </Link>{" "}
-              {/* Changed to Link */}
-            </div>
-          </li>
-          <li className="dropdown">
-            <div className="flip-container">
-              <Link to="/aboutus" className="flip-text">
-                About Us
-              </Link>{" "}
-              {/* Changed to Link */}
-            </div>
-          </li>
-          <li className="dropdown">
-            <div className="flip-container">
-              <Link to="/portfolio" className="flip-text">
-                Portfolio
-              </Link>{" "}
-              {/* Changed to Link */}
-            </div>
-          </li>
-          <li className="dropdown">
-            <div className="flip-container">
-              <span className="flip-text">
+              <span className="flip-text" onClick={handleLinkClick}>
                 Services <i className="fa-solid fa-caret-down"></i>
               </span>
             </div>
             <ul className="dropdown-content">
-              <li>
-                <Link to="/services/web-development">Web Development</Link>{" "}
-                {/* Link to specific service */}
-              </li>
-              <li>
-                <Link to="/services/e-commerce">E-commerce Development</Link>{" "}
-                {/* Link to specific service */}
-              </li>
-              <li>
-                <Link to="/services/app-development">App Development</Link>{" "}
-                {/* Link to specific service */}
-              </li>
-              <li>
-                <Link to="/services/seo">SEO</Link>{" "}
-                {/* Link to specific service */}
-              </li>
+              {[
+                { name: "Web Development", to: "/services/web-development" },
+                { name: "E-commerce Development", to: "/services/e-commerce" },
+                { name: "App Development", to: "/services/app-development" },
+                { name: "SEO", to: "/services/seo" },
+              ].map((service) => (
+                <li key={service.name}>
+                  <Link to={service.to} onClick={handleLinkClick}>
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </li>
-          <li className="dropdown">
-            <div className="flip-container">
-              <Link to="/blogs" className="flip-text">
-                BLOGS
-              </Link>{" "}
-              {/* Changed to Link */}
-            </div>
           </li>
         </ul>
 
-        {/* Contact Button */}
         {/* Contact Button */}
         <div className="contact-section">
           <Link to="/contactus" className="contact-button">

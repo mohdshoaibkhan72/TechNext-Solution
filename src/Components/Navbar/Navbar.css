@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px; /* Added left-right padding for spacing */
   position: relative;
 }
 
@@ -42,7 +42,7 @@
 
 .navbar-links li {
   position: relative;
-  margin: 0 15px;
+  margin: 0 20px; /* Increased margin for better spacing */
 }
 
 .navbar-links.show {
@@ -125,125 +125,6 @@
 }
 
 /* Contact Button */
-.contact-section button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-section button:hover {
-  background-color: #333;
-}
-
-/* Top Bar Section */
-.log {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 14px;
-  flex-wrap: wrap;
-}
-
-.log div {
-  margin-left: 30px;
-}
-
-.log .i a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.logo img {
-  max-height: 50px;
-  width: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .log {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
-
-  .log div {
-    margin-left: 20px;
-  }
-
-  .logo img {
-    max-height: 40px;
-  }
-
-  .hamburger-icon {
-    display: flex;
-    font-size: 1.4rem;
-  }
-
-  .navbar-links {
-    display: none;
-  }
-
-  .Navbar-section p {
-    display: flex;
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
-
-  .contact-section {
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
-    display: none;
-  }
-
-  .log .i {
-    display: none;
-  }
-
-  .log .logo img {
-    width: 100%;
-  }
-
-  .log div {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .Navbar-section {
-    padding: 10px;
-  }
-
-  .log .logo img {
-    width: 100%;
-  }
-
-  .flip-text {
-    font-size: 13px;
-  }
-
-  .contact-section button {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
-  .log {
-    padding: 8px;
-  }
-
-  .log div {
-    font-size: 11px;
-  }
-}
 .contact-section .contact-button {
   padding: 8px 20px;
   font-size: 1.1rem;
@@ -261,4 +142,201 @@
   background: #444;
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Top Bar Section */
+.log {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px; /* Added more padding for spacing */
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.log div {
+  margin-left: 30px;
+}
+
+.log .i a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+/* Navbar Section */
+.Navbar-section {
+  height: 7vh;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  transition: top 0.3s ease; /* Smooth transition for hiding */
+}
+
+/* Sticky Navbar */
+.sticky {
+  transition: 1.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add some shadow for effect */
+}
+
+/* Hidden Navbar when scrolling down */
+.navbar-hidden {
+  top: -10vh; /* Push navbar out of view */
+}
+
+/* Add styles for the links and buttons */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+/* Style for flip text */
+.flip-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.flip-text:hover {
+  color: #555;
+}
+
+/* Adjusting for mobile screens */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar-links.show {
+    max-height: 500px;
+  }
+
+  .hamburger-icon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* Contact Button Styling */
+.contact-section .contact-button {
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-section .contact-button:hover {
+  background: #444;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Navbar Section */
+  .Navbar-section {
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Contact button section adjustments */
+  .contact-section .contact-button {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  /* Hamburger icon styling */
+  .hamburger-icon {
+    display: flex;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  /* Navbar links (initially hidden) */
+  .navbar-links {
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Show navbar links when the menu is open */
+  .navbar-links.show {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  /* Styling for the individual navbar items */
+  .navbar-links li {
+    list-style: none;
+    margin: 10px 0;
+  }
+
+  .Navbar-section p {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  /* Adjustments for log section */
+  .log {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .log div {
+    margin-left: 20px;
+  }
+
+  .logo img {
+    max-height: 40px;
+  }
+
+  .log .i {
+    display: none;
+  }
+
+  .log .logo img {
+    width: 100%;
+  }
+
+  .log div {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 }
