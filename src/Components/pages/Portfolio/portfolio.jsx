@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import "./Portfolio.css";
 import img1 from "../../../images/praygtea.png";
 import img2 from "../../../images/image.png";
@@ -11,40 +11,44 @@ const projects = [
     title: "TechNext Solution",
     image: img2,
     liveLink: "https://technextsolution.com/",
-    type: "Fullstack", // Type of project
+    type: "Fullstack",
   },
   {
     title: "Paisa4you",
     image: img3,
     liveLink: "https://www.paisa4you.com/",
-    type: "Fullstack", // Type of project
+    type: "Fullstack",
   },
   {
     title: "Employee Management System",
     image: img4,
     liveLink: "https://ems-hr.vercel.app/",
-    type: "Fullstack", // Type of project
+    type: "Fullstack",
   },
   {
     title: "Prayag Tea",
     image: img1,
     liveLink: "https://prayagtea.com/",
-    type: "Design", // Type of project
+    type: "Design",
   },
 ];
 
 const Portfolio = () => {
   const [selectedType, setSelectedType] = useState("All");
 
-  // Filter projects based on selected type
-  const filteredProjects =
-    selectedType === "All"
+  // Filter projects using useMemo for optimization
+  const filteredProjects = useMemo(() => {
+    return selectedType === "All"
       ? projects
       : projects.filter((project) => project.type === selectedType);
+  }, [selectedType]);
+
+  // Filter button options
+  const filterOptions = ["All", "Fullstack", "Design"];
 
   return (
     <div className="portfolio-container">
-      {/* Full-width image and navigation */}
+      {/* Header Section */}
       <div className="header-section">
         <img src={img5} alt="Portfolio Background" className="header-image" />
         <div className="header-overlay">
@@ -57,27 +61,18 @@ const Portfolio = () => {
 
       {/* Filter Buttons */}
       <div className="filter-buttons">
-        <button
-          className={selectedType === "All" ? "active" : ""}
-          onClick={() => setSelectedType("All")}
-        >
-          All Projects
-        </button>
-        <button
-          className={selectedType === "Fullstack" ? "active" : ""}
-          onClick={() => setSelectedType("Fullstack")}
-        >
-          Fullstack
-        </button>
-        <button
-          className={selectedType === "Design" ? "active" : ""}
-          onClick={() => setSelectedType("Design")}
-        >
-          Design
-        </button>
+        {filterOptions.map((type) => (
+          <button
+            key={type}
+            className={selectedType === type ? "active" : ""}
+            onClick={() => setSelectedType(type)}
+          >
+            {type} Projects
+          </button>
+        ))}
       </div>
 
-      {/* Portfolio Content */}
+      {/* Portfolio Section */}
       <div className="portfolio-section">
         <h2>My Portfolio</h2>
         <p>
@@ -85,22 +80,19 @@ const Portfolio = () => {
           various industries.
         </p>
         <div className="project-grid">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map(({ title, image, liveLink }, index) => (
             <div className="project-card" key={index}>
               <div className="image-container">
-                <img
-                  src={project.image}
-                  alt={`Screenshot of ${project.title}`}
-                />
+                <img src={image} alt={`Screenshot of ${title}`} />
                 <div className="overlay">
-                  <h3>{project.title}</h3>
+                  <h3>{title}</h3>
                   <div className="links">
                     <a
-                      href={project.liveLink}
+                      href={liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Live Demo"
-                      aria-label={`View live demo of ${project.title}`}
+                      aria-label={`View live demo of ${title}`}
                     >
                       <i className="fas fa-external-link-alt"></i>
                     </a>
