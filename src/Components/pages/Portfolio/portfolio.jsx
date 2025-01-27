@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import "./Portfolio.css";
-import img1 from "../../../images/praygtea.png";
+import img1 from "../../../images/pragteahome.png";
 import img2 from "../../../images/image.png";
 import img3 from "../../../images/paisa4you.png";
 import img4 from "../../../images/EMS.png";
@@ -11,13 +11,13 @@ const projects = [
     title: "TechNext Solution",
     image: img2,
     liveLink: "https://technextsolution.com/",
-    type: "Fullstack",
+    type: "Static Websites",
   },
   {
     title: "Paisa4you",
     image: img3,
     liveLink: "https://www.paisa4you.com/",
-    type: "Fullstack",
+    type: "Static Websites",
   },
   {
     title: "Employee Management System",
@@ -28,8 +28,8 @@ const projects = [
   {
     title: "Prayag Tea",
     image: img1,
-    liveLink: "https://prayagtea.com/",
-    type: "Design",
+    liveLink: "https://www.prayagtea.com/",
+    type: "Static Websites",
   },
 ];
 
@@ -44,7 +44,7 @@ const Portfolio = () => {
   }, [selectedType]);
 
   // Filter button options
-  const filterOptions = ["All", "Fullstack", "Design"];
+  const filterOptions = ["All", "Fullstack", "Static Websites"];
 
   return (
     <div className="portfolio-container">
