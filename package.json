@@ -1,5 +1,5 @@
 {
-  "name": "rizvitech-solution",
+  "name": "technext-solution",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,8 +14,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.0",
     "react-slick": "^0.30.3",
-    "rizvitech-solution": "file:",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "technext-solution": "file:"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
