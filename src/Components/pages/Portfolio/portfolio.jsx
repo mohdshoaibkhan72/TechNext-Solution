@@ -10,7 +10,7 @@ const projects = [
   {
     title: "TechNext Solution",
     image: img2,
-    liveLink: "https://technextsolution.com/",
+    liveLink: "https://technextsolution.vercel.app/",
     type: "Static Websites",
   },
   {

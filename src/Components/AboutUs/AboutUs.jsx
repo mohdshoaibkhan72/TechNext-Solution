@@ -5,9 +5,34 @@ import poster from "../../images/AboutUs.jpeg";
 import img5 from "../../images/routesimg.jpg";
 
 function AboutUs() {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const navigate = useNavigate();
-  const isAboutUsPage = location.pathname === "/aboutus";
+  const isAboutUsPage = pathname === "/aboutus";
+
+  const content = (
+    <>
+      <h1>About Us</h1>
+      <h2>Delivering Innovation to Drive Business Success</h2>
+      <p>
+        <strong>TechNext Solution</strong> is a growing software development
+        company that has successfully delivered projects for{" "}
+        <strong>4-5 clients</strong> across various industries. We pride
+        ourselves on providing tailored, secure, and scalable solutions that
+        meet your unique business needs.
+      </p>
+      <p>
+        We specialize in building dynamic web applications, mobile apps, and
+        enterprise-level solutions to cater to the specific needs of our
+        clients. Our dedicated team ensures seamless integration and innovation
+        in every project we deliver.
+      </p>
+      <p>
+        Our mission is to empower businesses by leveraging technology to drive
+        growth and improve efficiency. We prioritize security, scalability, and
+        user experience in every solution.
+      </p>
+    </>
+  );
 
   return (
     <>
@@ -28,47 +53,11 @@ function AboutUs() {
           <img src={poster} alt="About TechNext Solution" />
         </div>
         <div className="rightside">
-          <h1>About Us</h1>
-          <h2>Delivering Innovation to Drive Business Success</h2>
-          <p>
-            <strong>TechNext Solution</strong> is a growing software development
-            company that has successfully delivered projects for{" "}
-            <strong>4-5 clients</strong> across various industries. We pride
-            ourselves on providing tailored, secure, and scalable solutions that
-            meet your unique business needs.
-          </p>
-          <p>
-            We specialize in building dynamic web applications, mobile apps, and
-            enterprise-level solutions to cater to the specific needs of our
-            clients. Our dedicated team ensures seamless integration and
-            innovation in every project we deliver.
-          </p>
-          <p>
-            Our mission is to empower businesses by leveraging technology to
-            drive growth and improve efficiency. We prioritize security,
-            scalability, and user experience in every solution.
-          </p>
+          {content}
 
           {/* Show additional paragraphs only on the '/aboutus' route */}
           {isAboutUsPage && (
             <>
-              <p>
-                We specialize in building dynamic web applications, mobile apps,
-                and enterprise-level solutions to cater to the specific needs of
-                our clients. Our dedicated team ensures seamless integration and
-                innovation in every project we deliver.
-              </p>
-              <p>
-                Our mission is to empower businesses by leveraging technology to
-                drive growth and improve efficiency. We prioritize security,
-                scalability, and user experience in every solution.
-              </p>
-              <p>
-                With a customer-centric approach, we focus on long-term
-                partnerships that contribute to our client's success. We are
-                constantly evolving to stay ahead of technological advancements
-                and industry trends.
-              </p>
               <p>
                 With a customer-centric approach, we focus on long-term
                 partnerships that contribute to our client's success. We are
