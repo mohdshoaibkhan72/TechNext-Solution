@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/1 copy.png";
+import logo from "../../images/1copy.png";
 import "./Navbar.css";
 
 function Navbar() {
