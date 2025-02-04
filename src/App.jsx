@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Landing from "./Components/Landing/Landing";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Services from "./Components/services/Services";
-import WhyChooseUs from "./Components/whychoseus/Whychoseus.jsx";
+import WhyChooseus from "./Components/whychoseus/Whychoseus.jsx";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Footer from "./Components/Footer/Footer";
 import Portfolio from "./Components/pages/Portfolio/portfolio";
@@ -23,7 +23,7 @@ function App() {
               <Landing />
               <AboutUs />
               <Services />
-              <WhyChooseUs />
+              <WhyChooseus />
               <Testimonials />
             </>
           }
@@ -31,7 +31,7 @@ function App() {
         {/* Other individual routes */}
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/why-choose-us" element={<WhyChooseUs />} />
+        <Route path="/why-choose-us" element={<WhyChooseus />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contactus" element={<ContactUs />} />
