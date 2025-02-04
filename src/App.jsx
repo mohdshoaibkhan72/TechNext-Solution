@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Landing from "./Components/Landing/Landing";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Services from "./Components/services/Services";
-import WhyChooseUs from "./Components/whychoseus/whychoseus";
+import WhyChooseUs from "./Components/whychoseus/Whychoseus.jsx";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Footer from "./Components/Footer/Footer";
 import Portfolio from "./Components/pages/Portfolio/portfolio";
