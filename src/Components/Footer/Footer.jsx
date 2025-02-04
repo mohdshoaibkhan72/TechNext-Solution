@@ -101,7 +101,7 @@ const Footer = () => {
             </div>
 
             {/* Map Section */}
-            <div className="footer-map">
+            {/* <div className="footer-map">
               <h3>Find Us On the Map</h3>
               <div className="map-container">
                 <iframe
@@ -114,7 +114,7 @@ const Footer = () => {
                   loading="lazy"
                 ></iframe>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>
