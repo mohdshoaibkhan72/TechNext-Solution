@@ -5,7 +5,7 @@ import img2 from "../../../images/image.png";
 import img3 from "../../../images/paisa4you.png";
 import img4 from "../../../images/EMS.png";
 import img5 from "../../../images/routesimg.jpg";
-
+import img6 from "../../../images/freeemi.png";
 const projects = [
   {
     title: "TechNext Solution",
@@ -30,6 +30,12 @@ const projects = [
     image: img1,
     liveLink: "https://www.prayagtea.com/",
     type: "Static Websites",
+  },
+  {
+    title: "FREE EMI",
+    image: img6,
+    liveLink: "https://www.freeemi.com/",
+    type: "Fullstack",
   },
 ];
 
