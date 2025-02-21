@@ -9,6 +9,7 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import Footer from "./Components/Footer/Footer";
 import Portfolio from "./Components/pages/Portfolio/portfolio";
 import ContactUs from "./Components/pages/ContactUs/Contactus";
+import Blogs from "./Components/pages/Blogs/blogs.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <AboutUs />
               <Services />
               <WhyChooseus />
+              <Blogs></Blogs>
               <Testimonials />
             </>
           }
