@@ -12,13 +12,12 @@ function AboutUs() {
   const content = (
     <>
       <h1>About Us</h1>
-      <h2>Delivering Innovation to Drive Business Success</h2>
+      <h2>Trusted IT Technology Services for Your Business</h2>
       <p>
         <strong>TechNext Solution</strong> is a growing software development
-        company that has successfully delivered projects for{" "}
-        <strong>4-5 clients</strong> across various industries. We pride
-        ourselves on providing tailored, secure, and scalable solutions that
-        meet your unique business needs.
+        company that has successfully delivered projects across various
+        industries. We pride ourselves on providing tailored, secure, and
+        scalable solutions that meet your unique business needs.
       </p>
       <p>
         We specialize in building dynamic web applications, mobile apps, and

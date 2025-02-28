@@ -10,7 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import Portfolio from "./Components/pages/Portfolio/portfolio";
 import ContactUs from "./Components/pages/ContactUs/Contactus";
 import Blogs from "./Components/pages/Blogs/blogs.jsx";
-
+import WebDevelopment from "./Components/Services/webdev/web.jsx";
 function App() {
   return (
     <Router>
@@ -25,7 +25,7 @@ function App() {
               <AboutUs />
               <Services />
               <WhyChooseus />
-              <Blogs></Blogs>
+              <Blogs />
               <Testimonials />
             </>
           }
@@ -33,10 +33,13 @@ function App() {
         {/* Other individual routes */}
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/why-choose-us" element={<WhyChooseus />} />
-        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route
+          path="/services/web-development"
+          element={<WebDevelopment></WebDevelopment>}
+        />
       </Routes>
       <Footer />
     </Router>
