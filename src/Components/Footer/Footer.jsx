@@ -31,28 +31,22 @@ const Footer = () => {
                 <h4>Follow Us</h4>
                 <div className="social-icons">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61573713864427"
                     className="social-icon facebook"
                     aria-label="Facebook"
                   >
                     <i className="fab fa-facebook-f"></i>
                   </a>
+
                   <a
-                    href="#"
-                    className="social-icon twitter"
-                    aria-label="Twitter"
-                  >
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a
-                    href="#"
+                    href="https://www.linkedin.com/company/technext-solution/?viewAsMember=true"
                     className="social-icon linkedin"
                     aria-label="LinkedIn"
                   >
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/technext_solution/"
                     className="social-icon instagram"
                     aria-label="Instagram"
                   >
@@ -67,16 +61,16 @@ const Footer = () => {
               <h3>About Us</h3>
               <ul>
                 <li>
-                  <a href="#">Our Story</a>
+                  <a href="/ourstory">Our Story</a>
                 </li>
                 <li>
-                  <a href="#">Our Team</a>
+                  <a href="/ourteam">Our Team</a>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <a href="/ourcarear">Careers</a>
                 </li>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <a href="/contactus">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -86,16 +80,16 @@ const Footer = () => {
               <h3>Our Services</h3>
               <ul>
                 <li>
-                  <a href="#">Web Development</a>
+                  <a href="web-development">Web Development</a>
                 </li>
                 <li>
-                  <a href="#">App Development</a>
+                  <a href="app-dev">App Development</a>
                 </li>
                 <li>
-                  <a href="#">UI/UX Design</a>
+                  <a href="uiux">UI/UX Design</a>
                 </li>
                 <li>
-                  <a href="#">SEO Services</a>
+                  <a href="ser">SEO Services</a>
                 </li>
               </ul>
             </div>

@@ -11,6 +11,8 @@ import Portfolio from "./Components/pages/Portfolio/portfolio";
 import ContactUs from "./Components/pages/ContactUs/Contactus";
 import Blogs from "./Components/pages/Blogs/blogs.jsx";
 import WebDevelopment from "./Components/Services/webdev/web.jsx";
+import NotFound from "./Components/404pagenotfound/404.jsx"; // Import the 404 component
+
 function App() {
   return (
     <Router>
@@ -36,10 +38,10 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route
-          path="/services/web-development"
-          element={<WebDevelopment></WebDevelopment>}
-        />
+        <Route path="/services/web-development" element={<WebDevelopment />} />
+
+        {/* 404 Page Not Found Route */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
